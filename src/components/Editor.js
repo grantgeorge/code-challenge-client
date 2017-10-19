@@ -104,7 +104,7 @@ class Editor extends React.Component {
                     disabled={this.props.inProgress}
                     onClick={this.submitForm}
                   >
-                    Publish Article
+                    Publish Post
                   </button>
                 </fieldset>
               </form>
