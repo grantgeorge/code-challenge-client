@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import {
   ADD_TAG,
   EDITOR_PAGE_LOADED,
-  ARTICLE_SUBMITTED,
+  POST_SUBMITTED,
   EDITOR_PAGE_UNLOADED,
   UPDATE_FIELD_EDITOR,
 } from '../constants/actionTypes'
@@ -18,7 +18,7 @@ const mapDispatchToProps = dispatch => ({
   onAddTag: () => dispatch({ type: ADD_TAG }),
   onLoad: payload => dispatch({ type: EDITOR_PAGE_LOADED, payload }),
   // onRemoveTag: tag => dispatch({ type: REMOVE_TAG, tag }),
-  onSubmit: payload => dispatch({ type: ARTICLE_SUBMITTED, payload }),
+  onSubmit: payload => dispatch({ type: POST_SUBMITTED, payload }),
   onUnload: payload => dispatch({ type: EDITOR_PAGE_UNLOADED }),
   onUpdateField: (key, value) =>
     dispatch({ type: UPDATE_FIELD_EDITOR, key, value }),

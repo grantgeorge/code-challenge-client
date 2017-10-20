@@ -2,11 +2,11 @@ import {
   APP_LOAD,
   REDIRECT,
   LOGOUT,
-  ARTICLE_SUBMITTED,
+  POST_SUBMITTED,
   SETTINGS_SAVED,
   LOGIN,
   REGISTER,
-  DELETE_ARTICLE,
+  DELETE_POST,
   ARTICLE_PAGE_UNLOADED,
   EDITOR_PAGE_UNLOADED,
   HOME_PAGE_UNLOADED,
@@ -36,7 +36,7 @@ export default (state = defaultState, action) => {
       return { ...state, redirectTo: null }
     case LOGOUT:
       return { ...state, redirectTo: '/', token: null, currentUser: null }
-    case ARTICLE_SUBMITTED:
+    case POST_SUBMITTED:
       const redirectUrl = `article/${action.payload.post.id}`
       return { ...state, redirectTo: redirectUrl }
     case SETTINGS_SAVED:
@@ -53,7 +53,7 @@ export default (state = defaultState, action) => {
         token: action.error ? null : action.payload.user.token,
         currentUser: action.error ? null : action.payload.user,
       }
-    case DELETE_ARTICLE:
+    case DELETE_POST:
       return { ...state, redirectTo: '/' }
     case ARTICLE_PAGE_UNLOADED:
     case EDITOR_PAGE_UNLOADED:

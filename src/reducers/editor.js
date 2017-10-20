@@ -1,7 +1,7 @@
 import {
   EDITOR_PAGE_LOADED,
   EDITOR_PAGE_UNLOADED,
-  ARTICLE_SUBMITTED,
+  POST_SUBMITTED,
   ASYNC_START,
   UPDATE_FIELD_EDITOR,
 } from '../constants/actionTypes'
@@ -17,14 +17,14 @@ export default (state = {}, action) => {
       }
     case EDITOR_PAGE_UNLOADED:
       return {}
-    case ARTICLE_SUBMITTED:
+    case POST_SUBMITTED:
       return {
         ...state,
         inProgress: null,
         errors: action.error ? action.payload.errors : null,
       }
     case ASYNC_START:
-      if (action.subtype === ARTICLE_SUBMITTED) {
+      if (action.subtype === POST_SUBMITTED) {
         return { ...state, inProgress: true }
       }
       break
