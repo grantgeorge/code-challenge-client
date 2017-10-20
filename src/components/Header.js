@@ -29,7 +29,6 @@ const LoggedOutView = props => {
 }
 
 const LoggedInView = props => {
-  console.log(props)
   if (props.currentUser) {
     return (
       <ul className="nav navbar-nav pull-xs-right">
