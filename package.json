@@ -31,5 +31,5 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "http://settheset.github.io/code-challenge-client"
+  "homepage": "https://settheset.github.io/code-challenge-client"
 }
